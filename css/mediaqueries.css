@@ -1,0 +1,20 @@
+/* when the screen size is less than 1200px */
+@media screen and (max-width: 1200px) {
+    #desktop-nav {
+        display: none;
+    }
+    #hamburger-nav {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #profile {
+        display: flex;
+        justify-content: center;
+        gap: 20%;
+    }
+    .section_pic-container {
+        margin: 0;
+    }
+}

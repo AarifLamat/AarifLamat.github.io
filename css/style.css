@@ -165,7 +165,7 @@ section {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: clamp(4rem, 6rem, 20vw);
+    font-size: clamp(2.5rem, 6rem, 10vw);
     /* font-size: 20vw; */
     color: white;
     padding-top: 2rem;
@@ -192,7 +192,7 @@ section {
 
 #star_out2 {
     position: absolute;
-    top: 5vw;
+    top: 8vw;
     right: clamp(0.1vw, 10vw, 4rem);
     transform: rotateZ(-40deg)
 
@@ -203,6 +203,13 @@ section {
     top: 4vw;
     left: clamp(0.1vw, 10rem, 50vw);
     transform: rotateZ(-10deg)
+}
+
+#star_fill2 {
+    position: absolute;
+    top: 4vw;
+    right: clamp(0.1vw, 15rem, 50vw);
+    transform: rotateZ(10deg)
 }
 
 .curve {
@@ -364,13 +371,14 @@ section {
 .heading {
     /* margin: 0 auto; */
     text-align: center;
-    font-size: clamp(3rem, 6vw , 20vw);
+    font-size: clamp(2rem, 6vw , 6vw);
     /* font-size: 15vw; */
+    word-break: break-all;
 }
 
 #xp-heading {
     color: white;
-    text-shadow: -0.2rem 0.2rem var(--mid);
+    text-shadow: -0.4rem 0.1rem var(--mid);
 }
 
 #xp-container-container {
@@ -398,11 +406,15 @@ section {
     padding-top: 0.1rem;
     padding-bottom: 2rem;
     border-radius: 2rem;
-    border: 4px solid var(--mid);
+    /* border: 4px solid var(--mid); */
 }
 
-.xp-container1 {
-    
+#xp-container1 {
+    box-shadow: -0.5rem 0.1rem var(--mid);
+}
+
+#xp-container2 {
+    box-shadow: 0.5rem 0.1rem var(--mid);
 }
 
 .xp-subheadings {
@@ -427,4 +439,10 @@ section {
     position: relative;
     /* background-color: var(--green); */
     /* right: 2rem; */
+}
+
+/* PROJECTS SECTION */
+
+#projects {
+
 }

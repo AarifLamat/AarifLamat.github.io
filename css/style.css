@@ -1,29 +1,4 @@
-/* font classes
-.poppins-light {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .poppins-regular {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .poppins-medium {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .poppins-semibold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-
-* {
+/* * {
     margin: 0;
     padding: 0;
 } */
@@ -150,6 +125,7 @@ section {
 
 #intro {
     padding: 0;
+    padding-top: clamp(1vw, 2rem, 10vw);
     /* padding-bottom: 6rem; */
     display: flex;
     flex-direction: column;
@@ -292,7 +268,9 @@ section {
 }
 
 .name {
-    font-size: 3.5rem;
+    /* font-size: 3.5rem; */
+    font-size: clamp(1rem, 3.5rem, 8vw);
+    /* font-size: 8vw; */
     font-weight: 600;
     text-align: center;
     /* border: 2px solid purple; */
@@ -369,13 +347,13 @@ section {
     width: 100%;
     margin: 0;
     padding: 0;
-    min-height: 45vw;
+    min-height: min-content;
 }
 
 .heading {
     /* margin: 0 auto; */
     text-align: center;
-    font-size: clamp(2rem, 6vw , 6vw);
+    font-size: clamp(2.3rem, 6vw , 6vw);
     /* font-size: 15vw; */
     word-break: break-all;
 }
@@ -386,35 +364,48 @@ section {
 }
 
 #xp-container-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr; */
-    margin-top: 4rem;
+    margin-top: 2rem;
     height: 100%;
-    /* padding-bottom: 10rem; */
     /* border: 2px solid red; */
 }
 
 #perspective-container1 {
-    transform: perspective(70cm) rotateX(0deg) rotateY(40deg);
+    transform: perspective(60cm) rotateX(0deg) rotateY(40deg);
+    margin: auto;
+    padding-bottom: 2rem;
+    height: 100%;
+    width: 100vw;
 }
 
 #perspective-container2 {
-    transform: perspective(70cm) rotateX(0deg) rotateY(-40deg);
+    transform: perspective(60cm) rotateX(0deg) rotateY(-40deg);
+    margin: auto;
+    padding-bottom: 2rem;
+    height: 100%;
+    width: 100vw;
 }
 
 .xp-container {
     background-color: white;
-    /* width: 90%; */
-    height: 90%;
+    height: 100%;
     padding-top: 0.1rem;
     padding-bottom: 2rem;
     border-radius: 2rem;
-    /* border: 4px solid var(--mid); */
+    /* border: 4px solid blue; */
 }
 
 #xp-container1 {
     box-shadow: -0.5rem 0.1rem var(--mid);
+}
+
+.xp-ul-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.xp-ul-grid > * {
+    /* border: 2px solid red; */
 }
 
 #xp-container2 {
@@ -427,7 +418,7 @@ section {
 }
 
 .xp-container ul {
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
 }
 
 .xp-container li {
@@ -435,7 +426,7 @@ section {
 }
 
 .xp-container li::marker{
-    font-size: 4em;
+    font-size: 3em;
 }
 
 #coming-soon {
@@ -448,5 +439,21 @@ section {
 /* PROJECTS SECTION */
 
 #projects {
+    background-color: white;
+    min-height: 40rem;
+    border: 2px solid blue;
+}
 
+#projects__bg {
+    height: 100%;
+    width: 100%;
+    background-image: url('/assets/BlueHandDrawnGrid.jpg');
+    background-size: 100%;
+    background-repeat: repeat;
+    border: 2px solid red;
+}
+
+#projects-heading {
+    color: var(--mid);
+    text-shadow: -0.4rem 0.1rem var(--black);
 }

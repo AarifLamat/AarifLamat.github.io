@@ -50,15 +50,8 @@
         <div class="section_text">
             <p class="section_text_p1">Hey👋 I'm</p>
             <h1 class="name">Aarif Lamat</h1>
-            <!-- <p class="section_text_p2">Front-end Developer</p>
-            <p class="section_text_p3">..almost</p> -->
             <p class="section_text_p3">Student @ <a href="uwa.edu.au" class="bio-link">UWA</a>, <br> Committee member @ <a href="codersforcauses.org" class="bio-link">CodersForCauses</a></p>
             <div class="btn-container">
-                <!-- <button 
-                 class="btn btn-color-2" 
-                 onclick="window.open('./assets/Aarif_Lamat_CV.pdf')">
-                    Download CV
-                </button> -->
                 <button 
                  class="btn btn-color-1" 
                  onclick="location.href='./#contact'">
@@ -73,14 +66,26 @@
             <div id="perspective-container1" class="perspective-conatiner">
                 <div id="xp-container1" class="xp-container">
                     <h2 class="xp-subheadings">SKILLS</h2>
-                    <ul>
-                        <li class="xp">HTML</li>
-                        <li class="xp">CSS</li>
-                        <li class="xp">JS</li>
-                        <li class="xp">TS</li>
-                        <li class="xp">React</li>
-                        <li class="xp">Figma</li>
-                    </ul>
+                    <div class="xp-ul-grid">
+                        <ul>
+                            <li class="xp">HTML</li>
+                            <li class="xp">CSS</li>
+                            <li class="xp">JS</li>
+                            <li class="xp">TS</li>
+                        </ul>
+                        <ul>
+                            <li class="xp">React</li>
+                            <li class="xp">Figma</li>
+                            <li class="xp">SQL</li>
+                            <li class="xp">Flask</li>
+                        </ul>
+                        <ul>
+                            <li class="xp">C</li>
+                            <li class="xp">Python</li>
+                            <li class="xp">R</li>
+                            <li class="xp">Java</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div id="perspective-container2" class="perspective-conatiner">
@@ -95,9 +100,12 @@
         </div>
     </section>
     <section id="projects">
-        <h1></h1>
-    </section>
+        <div id="projects">
+            <h1 id="projects-heading" class="heading">PROJECTS</h1>
+        </div>
+        </section>
     <section id="contact">
+        <h1 id="contact-heading" class="heading">CONTACT</h1>
         <div id="socials-container">
             <img 
              src="./assets/linkedin.png" 
@@ -109,7 +117,11 @@
              alt="link to my github profile"
              class="icon"
              onclick="location.href='https://github.com'" >
+             CHANGE THESE TO SVGs!!!
         </div>
     </section>
+    <footer>
+        <a href="https://www.freepik.com/free-vector/light-blue-hand-drawn-grid_72377153.htm#query=blue%20graph%20paper&position=11&from_view=keyword&track=ais_user&uuid=0a5757ac-0b0d-4082-890f-50d4f9e230dd">Image by juicy_fish</a> on Freepik
+    </footer>
 </body>
 </html>

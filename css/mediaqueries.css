@@ -17,4 +17,8 @@
     .section_pic-container {
         margin: 0;
     }
+
+    #xp-container-container {
+        display: flex;
+    }
 }

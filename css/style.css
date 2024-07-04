@@ -379,7 +379,6 @@ section {
 
 #perspective-container2 {
     transform: perspective(60cm) rotateX(0deg) rotateY(-40deg);
-    margin: auto;
     padding-bottom: 2rem;
     height: 100%;
     width: 100vw;
@@ -444,16 +443,17 @@ section {
     border: 2px solid blue;
 }
 
-#projects__bg {
-    height: 100%;
-    width: 100%;
-    background-image: url('/assets/BlueHandDrawnGrid.jpg');
+#proj__bg {
+    min-height: 40rem;
+    width: 99%;
+    margin: auto;
+    background-image: url('/assets/LightBlueHandDrawnGrid_30Opacity.jpg');
     background-size: 100%;
     background-repeat: repeat;
     border: 2px solid red;
 }
 
-#projects-heading {
+#proj__heading {
     color: var(--mid);
     text-shadow: -0.4rem 0.1rem var(--black);
 }

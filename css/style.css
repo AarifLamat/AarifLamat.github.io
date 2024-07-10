@@ -6,8 +6,8 @@
 :root {
     --white: rgb(255, 255, 255);
     --black: rgb(20, 20, 20);
-    --navy: rgb(27, 46, 54);
-    --accent: rgba(0, 209, 80, .8);
+    --blackish: rgb(35, 35, 35);
+    --accent: rgba(0, 209, 80);
     --green: rgb(0, 110, 42);
     --mid: rgb(154, 219, 200);
     --gray: rgb(239, 255, 224);
@@ -66,14 +66,15 @@ nav {
     justify-content: space-between;
     height: 15vh;
     width: 100%;
-    /* width: 90%;
-    margin: 0 auto; */
+    /* margin: 0 auto; */
     background-color: transparent;
     /* border: 2px solid black; */
     position: fixed;
     top: 0;
     z-index: 20;
 }
+
+/* TODO: ADD A DAY-MODE */
 
 #lightdark-mode-container {
     display: flex;
@@ -85,7 +86,6 @@ nav {
 #burger-menu-container {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     position: relative;
     margin-right: 2rem;
     height: 50%;
@@ -101,6 +101,44 @@ nav {
     /* transform: translateX(-0.5rem) translateY(0.5rem);
     box-shadow: none;
     transition: transform 2s; */
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--black);
+    width: fit-content;
+    /* border: 2px solid var(--white); */
+    border-radius: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    display: flex;
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 5rem;
+}
+
+.menu-links {
+    list-style: none;
+}
+
+/* .menu.open {
+    max-height: 50vh;
+} */
+
+#burger-menu-container.open > .menu{
+    max-height: 100vh;
+    display: block;
+    border: 2px solid var(--white);
+    padding: 2rem;
+    padding-right: 6rem;
 }
 
 /* MOBILE NAV */
@@ -295,12 +333,11 @@ section {
     height: 2rem;
 }
 
-/* BUTTONS */
+/* BUTTON */
 
 .btn-container {
     display: flex;
     justify-content: center;
-    gap: 1rem;
 }
 
 .btn { 
@@ -309,35 +346,27 @@ section {
     padding: 1rem;
     width: 11rem;
     border-radius: 3rem;
-}
-
-.btn-color-1, 
-.btn-color-2 {
-    border: 0.13rem solid var(--black);
-    font-size: medium;
-}
-
-.btn-color-1:hover, 
-.btn-color-2:hover {
-    cursor: pointer
-}
-
-.btn-color-1, 
-.btn-color-2:hover {
-    background: var(--black);
+    background-color: var(--blackish);
     color: white;
+    font-size: medium;
+    border: 0.13rem solid var(--black);
+    cursor: pointer;
+    transition: background-color 1s;
+    transition: padding 1s;
+}
+
+#contact-btn:hover {
+    background-color: var(--black);
+    /* color: rgba(255,255,255,.8); */
+    /* padding: 1.1rem; */
+}
+
+#lightdark-mode-btn {
+    background-color: white;
 }
 
 .btn-color-1:hover {
-    background: var(--black);
-}
-
-.btn-color-2 {
-    background: none;
-}
-
-.btn-color-2 {
-    background-color: white;
+    cursor: pointer
 }
 
 /* EXPERIENCE SECTION */
@@ -360,18 +389,18 @@ section {
 
 #xp-heading {
     color: white;
-    text-shadow: -0.4rem 0.1rem var(--mid);
+    text-shadow:  -0.4rem 0.1rem var(--mid);
 }
 
 #xp-container-container {
     margin-top: 2rem;
     height: 100%;
-    /* border: 2px solid red; */
+    border: 2px solid red;
 }
 
 #perspective-container1 {
     transform: perspective(60cm) rotateX(0deg) rotateY(40deg);
-    margin: auto;
+    /* margin: auto; */
     padding-bottom: 2rem;
     height: 100%;
     width: 100vw;
@@ -438,22 +467,30 @@ section {
 /* PROJECTS SECTION */
 
 #projects {
+    margin: 0;
+    padding: 0;
     background-color: white;
     min-height: 40rem;
-    border: 2px solid blue;
+    border: 2px solid white;
 }
 
 #proj__bg {
     min-height: 40rem;
-    width: 99%;
-    margin: auto;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0 auto;
     background-image: url('/assets/LightBlueHandDrawnGrid_30Opacity.jpg');
     background-size: 100%;
     background-repeat: repeat;
-    border: 2px solid red;
+    background-position-y: top;
+    /* border: 2px solid red; */
 }
 
 #proj__heading {
     color: var(--mid);
     text-shadow: -0.4rem 0.1rem var(--black);
 }
+
+/* CONTACT SECTION */
+
+

@@ -5,3 +5,4 @@ function toggleMenu() {
     burger.classList.toggle("open");
     console.log("toggling menu");
 }
+

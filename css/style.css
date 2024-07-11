@@ -377,6 +377,7 @@ section {
     margin: 0;
     padding: 0;
     min-height: min-content;
+    padding-bottom: 2rem;
 }
 
 .heading {
@@ -395,7 +396,7 @@ section {
 #xp-container-container {
     margin-top: 2rem;
     height: 100%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 #perspective-container1 {
@@ -428,8 +429,7 @@ section {
 
 .xp-ul-grid {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    
 }
 
 .xp-ul-grid > * {
@@ -471,10 +471,13 @@ section {
     padding: 0;
     background-color: white;
     min-height: 40rem;
-    border: 2px solid white;
+    /* border: 2px solid blue; */
 }
 
 #proj__bg {
+    border: 2px solid white;
+    position: relative;
+    top: 0;
     min-height: 40rem;
     width: 100vw;
     max-width: 100%;

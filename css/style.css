@@ -600,7 +600,12 @@ section {
   background-color: rgb(240, 240, 240);
   border: 2px solid var(--mid);
   /* border: 2px solid red; */
-  overflow: hidden;
+  text-decoration: none;
+}
+
+.proj__card a {
+  text-decoration: none;
+  color: var(--black);
 }
 
 .proj__card:hover {

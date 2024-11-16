@@ -151,6 +151,10 @@ nav {
   width: fit-content;
 }
 
+.menu a:hover {
+  color: var(--mid);
+}
+
 /* .menu.open {
     max-height: 50vh;
 } */
@@ -164,8 +168,9 @@ nav {
   /* padding-right: rem; */
 }
 
-.burger-svg:active {
-}
+/* .burger-svg:hover {
+  color: var(--mid);
+} */
 
 .close-svg-container {
   display: flex;
@@ -181,6 +186,10 @@ nav {
   position: relative;
   top: 0;
   right: 0;
+}
+
+.close-svg:hover {
+  color: var(--mid);
 }
 /* MOBILE NAV */
 
@@ -228,10 +237,30 @@ section {
   font-family: "3Dventure", sans-serif;
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes opacityChange {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
 .star {
   /* border: 2px solid red; */
   margin: 0;
   padding: 0;
+  animation: spin 10s linear infinite, opacityChange 5s ease-in-out infinite;
 }
 
 .star__outline {
@@ -508,28 +537,92 @@ section {
   margin: 0;
   padding: 0;
   background-color: white;
-  min-height: 40rem;
+  min-height: 35rem;
   /* border: 2px solid blue; */
 }
 
 #proj__bg {
   border: 2px solid white;
   position: relative;
-  top: 0;
+  /* top: -2rem; */
   min-height: 40rem;
   width: 100vw;
   max-width: 99%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   background-image: url("/assets/LightBlueHandDrawnGrid_30Opacity.jpg");
-  background-size: 100%;
+  -webkit-background-origin: border;
+  background-size: cover;
   background-repeat: repeat;
   background-position-y: top;
   /* border: 2px solid red; */
 }
 
+#proj__bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#proj__carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 2rem;
+  /* border: 2px solid green; */
+  position: relative;
+  z-index: 2;
+}
+
 #proj__heading {
+  position: relative;
+  z-index: 2;
+  top: -2rem;
   color: var(--mid);
   text-shadow: -0.4rem 0.1rem var(--black);
+}
+
+.proj__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  height: 18rem;
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: rgb(240, 240, 240);
+  border: 2px solid var(--mid);
+  /* border: 2px solid red; */
+  overflow: hidden;
+}
+
+.proj__card:hover {
+  cursor: pointer;
+}
+
+.proj__img {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 1rem;
+}
+
+#pokeball-open {
+  display: none;
+}
+
+.img-wrapper:hover #pokeball-closed {
+  display: none;
+}
+
+.img-wrapper:hover #pokeball-open {
+  display: block;
 }
 
 /* CONTACT SECTION */

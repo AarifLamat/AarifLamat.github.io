@@ -9,3 +9,9 @@ function toggleMenu() {
     burger.classList.toggle("open");
     console.log("toggling menu");
 }
+
+function openPokeball() {
+    const pokeball = document.getElementById("pokeball");
+    pokeball.classList.toggle("open");
+    console.log("opening pokeball");
+}
